@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+makefile 变量的使用
+定义
+	变量名 := [文本]
+添加
+	变量名 += [文本] == 变量名:=[文本][文本]
+
+引用变量
+
+	$(变量名)
+	$单字符变量
+
+	G := gcc
+	$G -o power power.c
+
+	CC:=gcc
+	$(CC) -o bin/mymath mymath.c
+
+内置变量
+
+$@  当前目标名称
+$?	比当前目标更新的已修改的以来性列表
+$<	依赖性列表的第一个文件
+$^	用空格分开的所有列表性列表
+
+
+虚目标列表
+
+all		生成
+test	运行程序的测试套件
+clean	清除make产生的各种文件
+
+
+clean:
+	rm -rf obj/mymath.o obj/mymath_test.o
