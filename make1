@@ -30,7 +30,9 @@ $^	用空格分开的所有列表性列表
 all		生成
 test	运行程序的测试套件
 clean	清除make产生的各种文件
+install	安装项目生成的可执行文件
 
+.PHONY:clean 指定clean为虚目标
 
 clean:
 	rm -rf obj/mymath.o obj/mymath_test.o
