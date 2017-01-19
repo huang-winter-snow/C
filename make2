@@ -1,0 +1,12 @@
+CC:=gcc
+CFALGS:=-I include
+CFLAGS+= -c
+TARGET:=main
+DEPEND:=obj/menu.o obj/main.o obj/link.o obj/func.o
+
+$(TARGET):$(DEPEND)
+	$(CC) $^ -o $@
+obj/%.o:src/%.c
+	$(CC) $^ -o $@ $(CFLAGS)
+clean:
+	rm -rf ./obj/*.o 
