@@ -1,2 +1,1 @@
-# C
-学习笔记
+https://www.kancloud.cn/kancloud/make-command/45594 makefile 语法
