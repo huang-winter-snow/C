@@ -4,19 +4,20 @@
 struct node {
 	int data;
 	struct node *next;
-}
+};
 
 void init(struct node *head)
 {
 	head = NULL;
 }
 
-struct node *push(struct node *head, int data)
+struct node *push(struct node* head, int data)
 {
 	struct node *tmp = (struct node*)malloc(sizeof(struct node));
 
-	if (tmp == NULL)
+	if (tmp == NULL) {
 		exit(0);
+	}
 
 	tmp->data = data;
 	tmp->next = head;
@@ -53,6 +54,7 @@ void display(struct node *head)
 		do
 		{
 			printf("%d\n", current->data);
+			current = current->next;
 		} while (current != NULL);
 	} else {
 		printf("The Stack is empty\n");
