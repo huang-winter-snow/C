@@ -3,7 +3,6 @@ void init(int *top)
 	*top = 0;
 }
 
-
 void push(int *s, int *top, int element)
 {
 	s[(*top)++] = element;

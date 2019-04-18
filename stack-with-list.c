@@ -33,6 +33,8 @@ struct node *pop(struct node *head, int *element)
 	*element = head->data;
 	head = head->next;
 	free(tmp);
+
+	return head;
 }
 
 int empty(struct node *head)
