@@ -5,7 +5,7 @@
 #include <string.h>
 
 typedef struct node {
-    char *name;
+    char name[10];
     struct node* next;
 } node;
 
@@ -14,14 +14,12 @@ node* first[26] = {NULL};
 
 int hash(const char* buffer)
 {
-    printf("%s", buffer);
-    
     return tolower(buffer[0]) - 'a';
 }
 
 void insert(int key, const char* buffer)
 {
-    node* newptr = malloc(sizeof(node));
+    node* newptr = (node *) malloc(sizeof(node));
     if (newptr == NULL) {
         return;
     }
