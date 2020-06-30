@@ -9,7 +9,6 @@ typedef struct node {
     struct node* next;
 } node;
 
-
 node* first[26] = {NULL};
 
 int hash(const char* buffer)

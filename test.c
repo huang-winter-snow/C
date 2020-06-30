@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <stdbool.h>
+
+void add(int, char*);
 
 int main(int argc, char const *argv[])
 {
-	int a = 10;
+	int b = 2;
+	int* p = &b;
 
-	while (a != 0) {
-		printf("%d\n", --a);
-	}
-
+	printf("%d", *p);
+	
 	return 0;
 }
