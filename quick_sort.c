@@ -59,3 +59,50 @@ int main(int argc, char const *argv[])
 
 	return 0;
 }
+
+/*
+int partition(int* arr, int low, int high) 
+{
+	if (low >= high) {
+		return -1;
+	}
+
+	int i = low;
+	int j = high;
+	int pivot = arr[low];
+
+	while(i < j) {
+		while(i < j && arr[j] >= pivot) {
+			j--;
+		}
+
+		if (i < j) {
+			arr[i++] = arr[j];
+		}
+
+		while (i < j && arr[i] < pivot) {
+			i++;
+		}
+
+		if (i < j)
+		{
+			arr[j--] = arr[i];
+		}
+	}
+
+	arr[i] = pivot;
+
+	return i;
+}
+
+void quick_sort(int* arr, int low, int high)
+{
+	if (low >= high) {
+		return;
+	}
+
+	int index = partition(arr, low, high);
+
+	quick_sort(arr, low, index - 1);
+	quick_sort(arr, index + 1, high);
+}*/
