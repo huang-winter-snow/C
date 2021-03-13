@@ -12,9 +12,9 @@ int main(void)
 	return 0;
  }
 
-gcc -c main.c ==== 编译不链接，生成.o目标文件
+gcc -c main.c ==== 生成机器指令，生成.o目标文件
 gcc -E main.c ==== 预处理 
-gcc -S main.c ==== 只编译不汇编
+gcc -S main.c ==== 生成汇编文件
 gcc -g main.c -o main_d ==== 可进行gdb调试
 
 
